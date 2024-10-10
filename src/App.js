@@ -8,32 +8,26 @@
 
 /** IMPORTEM les llibreries necessàries */
 import React from 'react';
+import { PaperProvider, Text } from 'react-native-paper';
 import {
   ScrollView,
   StatusBar,
   StyleSheet,
-  Text,
   View,
 } from 'react-native';
 import Partit from './components/partit/Partit';
-
+const nom = () => {
+  return (
+    <Text>Nico</Text>
+  );
+}
 /** A la funció App, dins del return crearem la notra pantalla */
 const App = () => {
   return (
-    <View>
-      <StatusBar/>
-      <ScrollView>
-        <View>
-          <Text style={estils.titol}> Resultats lliga 24-25</Text>
-          <Partit e1='Valencia cf' e2='Betis' r1={5} r2={5}> </Partit>
-          <Partit 
-          
-          > </Partit>
-          <Partit> </Partit>
-          <Partit> </Partit>
-        </View>
-      </ScrollView>
-    </View>
+    <PaperProvider>
+      {nom()}
+    </PaperProvider>
+
   );
 }
 
